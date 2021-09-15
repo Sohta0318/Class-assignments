@@ -56,7 +56,7 @@ const check = function () {
         break;
       }
     }
-    console.log(`score: ${total} deg: ${deg}`);
+    console.log(`name: ${students[y].name} score: ${total} deg: ${deg}`);
     deg = "failed";
   }
 };
