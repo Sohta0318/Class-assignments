@@ -49,18 +49,32 @@ console.log(total);
 const check = function () {
   let deg = "failed";
   for (let y = 0; y < total.length; y++) {
-    console.log(total[y]);
     for (let i = 0; i < pl.length; i++) {
       if (total[y] >= pl[i]) {
         deg = degrees[i];
         break;
       }
     }
-    console.log(`name: ${students[y].name} score: ${total} deg: ${deg}`);
+    console.log(`name: ${students[y].name} score: ${total[y]} deg: ${deg}`);
     deg = "failed";
   }
 };
 check();
+// const check = function () {
+//   let deg = "failed";
+//   for (let y = 0; y < total.length; y++) {
+//     // console.log(total[y]);
+//     for (let i = 0; i < pl.length; i++) {
+//       if (total[y] >= pl[i]) {
+//         deg = degrees[i];
+//         break;
+//       }
+//     }
+//     console.log(`name: ${students[y].name} score: ${total} deg: ${deg}`);
+//     deg = "failed";
+//   }
+// };
+// check();
 
 // const totalScore = function () {
 //   let deg = "failed",
