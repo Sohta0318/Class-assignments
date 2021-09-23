@@ -31,14 +31,14 @@
 function isSorted(arr) {
   let result;
   if (
-    arr.every(function (x, i) {
-      return i === 0 || x >= arr[i - 1];
+    arr.every(function (value, i) {
+      return i === 0 || value >= arr[i - 1];
     })
   ) {
     result = true;
   } else if (
-    arr.every(function (x, i) {
-      return i === 0 || x <= arr[i - 1];
+    arr.every(function (value, i) {
+      return i === 0 || value <= arr[i - 1];
     })
   ) {
     result = true;
