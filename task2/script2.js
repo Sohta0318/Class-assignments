@@ -46,20 +46,6 @@ const total = students.map((student) => student.score1 + student.score2);
 console.log(total);
 
 // 4
-const check = function () {
-  let deg = "failed";
-  for (let y = 0; y < total.length; y++) {
-    for (let i = 0; i < pl.length; i++) {
-      if (total[y] >= pl[i]) {
-        deg = degrees[i];
-        break;
-      }
-    }
-    console.log(`name: ${students[y].name} score: ${total[y]} deg: ${deg}`);
-    deg = "failed";
-  }
-};
-check();
 // const check = function () {
 //   let deg = "failed";
 //   for (let y = 0; y < total.length; y++) {
@@ -112,3 +98,80 @@ check();
 //   }
 // };
 // totalScore();
+
+// (function () {
+//   // 1
+//   const students = [
+//     {
+//       name: "John",
+//       score1: 47,
+//       score2: 46,
+//     },
+//     {
+//       name: "Bob ",
+//       score1: 23,
+//       score2: 24,
+//     },
+//     {
+//       name: "Nick",
+//       score1: 40,
+//       score2: 35,
+//     },
+//     {
+//       name: "Alex",
+//       score1: 44,
+//       score2: 45,
+//     },
+//   ];
+//   // 2
+//   const passingLimits = [91, 81, 71, 61, 51];
+//   const degree = ["A", "B", "C", "D", "E"];
+//   // 3
+//   const totalScore = students.map((student) => student.score1 + student.score2);
+//   // 4
+//   const examPassed = () => {
+//     let grade = "false";
+//     for (let i = 0; i < students.length; i++) {
+//       for (let j = 0; j < passingLimits.length; j++) {
+//         if (totalScore[i] >= passingLimits[j]) {
+//           grade = degree[j];
+//           break;
+//         }
+//       }
+//       console.log(
+//         `${students[i].name} got ${totalScore[i]} points : GRADE ${grade}`
+//       );
+//       grade = "failed";
+//     }
+//   };
+//   // 5
+//   examPassed();
+// })();
+// const check = function () {
+//   let deg = "failed";
+//   for (let y = 0; y < total.length; y++) {
+//     for (let i = 0; i < pl.length; i++) {
+//       if (total[y] >= pl[i]) {
+//         deg = degrees[i];
+//         break;
+//       }
+//     }
+//     console.log(`name: ${students[y].name} score: ${total[y]} deg: ${deg}`);
+//     deg = "failed";
+//   }
+// };
+// check();
+
+const final = function () {
+  total.forEach((values, i) => {
+    let deg = "";
+    pl.forEach((value, i) => {
+      if (deg) return;
+      if (values >= value) {
+        deg = degrees[i];
+      }
+    });
+    console.log(`name: ${students[i].name} score: ${values} deg: ${deg}`);
+  });
+};
+final();
